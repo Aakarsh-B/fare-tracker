@@ -3,3 +3,5 @@ checked_at,route_id,probe_type,outbound_date,return_date,price,airlines,stops,du
 2026-08-27T13:06:00+00:00,blr_fco_biz,rotating,2027-03-27,,90555,Saudia,1,885,,,
 2026-08-27T13:06:02+00:00,blr_zrh_biz,rotating,2027-03-27,,86773,Saudia,1,940,,,
 2026-08-27T13:06:07+00:00,blr_mxp_bid,rotating,2027-03-27,2027-04-10,52509,Akasa Air / Etihad,1,790,,,
+2026-08-27T13:18:15+00:00,blr_mxp_bid,rotating,2027-03-19,2027-04-02,55144,Akasa Air / Etihad,1,790,,,
+2026-08-27T13:18:25+00:00,blr_mxp_bid,recheck,2027-03-27,2027-04-10,52509,Akasa Air / Etihad,1,790,,,
