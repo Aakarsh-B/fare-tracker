@@ -22,7 +22,7 @@
       "arrival_id": "MXP",
       "travel_class": 3,
       "trip": "one_way",
-      "target_price": 130000,
+      "target_price": 90000,
       "note": "Primary business target. One way is enough."
     },
     {
@@ -32,7 +32,7 @@
       "arrival_id": "FCO",
       "travel_class": 3,
       "trip": "one_way",
-      "target_price": 125000,
+      "target_price": 80000,
       "note": "Rome + 3h Frecciarossa to Milan."
     },
     {
@@ -42,7 +42,7 @@
       "arrival_id": "ZRH",
       "travel_class": 3,
       "trip": "one_way",
-      "target_price": 125000,
+      "target_price": 78000,
       "note": "Zurich + 3h20 train to Milano Centrale."
     },
     {
@@ -53,7 +53,7 @@
       "travel_class": 1,
       "trip": "round_trip",
       "include_airlines": "EK,EY,GF,WY",
-      "target_price": 55000,
+      "target_price": 45000,
       "note": "Cheap economy on carriers that run cash upgrade auctions."
     }
   ]
