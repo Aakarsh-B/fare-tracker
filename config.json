@@ -1,0 +1,54 @@
+{
+  "currency": "INR",
+  "gl": "in",
+  "hl": "en",
+  "window_start": "2027-03-10",
+  "window_end": "2027-04-30",
+  "rotate_step": 7,
+  "return_after_days": 14,
+  "drop_threshold": 0.85,
+  "alert_cooldown_days": 3,
+  "routes": [
+    {
+      "id": "blr_mxp_biz",
+      "label": "Bengaluru \u2192 Milan Malpensa",
+      "departure_id": "BLR",
+      "arrival_id": "MXP",
+      "travel_class": 3,
+      "trip": "one_way",
+      "target_price": 130000,
+      "note": "Primary business target. One way is enough."
+    },
+    {
+      "id": "blr_fco_biz",
+      "label": "Bengaluru \u2192 Rome Fiumicino",
+      "departure_id": "BLR",
+      "arrival_id": "FCO",
+      "travel_class": 3,
+      "trip": "one_way",
+      "target_price": 125000,
+      "note": "Rome + 3h Frecciarossa to Milan."
+    },
+    {
+      "id": "blr_zrh_biz",
+      "label": "Bengaluru \u2192 Zurich",
+      "departure_id": "BLR",
+      "arrival_id": "ZRH",
+      "travel_class": 3,
+      "trip": "one_way",
+      "target_price": 125000,
+      "note": "Zurich + 3h20 train to Milano Centrale."
+    },
+    {
+      "id": "blr_mxp_bid",
+      "label": "Bengaluru \u2192 Milan (upgrade-bid carriers)",
+      "departure_id": "BLR",
+      "arrival_id": "MXP",
+      "travel_class": 1,
+      "trip": "round_trip",
+      "include_airlines": "EK,EY,GF,WY",
+      "target_price": 55000,
+      "note": "Cheap economy on carriers that run cash upgrade auctions."
+    }
+  ]
+}
