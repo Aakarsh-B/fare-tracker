@@ -72,13 +72,29 @@ def call_serpapi(api_key, params):
         return json.loads(response.read().decode("utf-8"))
 
 
-def cheapest_itinerary(payload):
-    """Pick the lowest-priced itinerary across both result buckets."""
+def cheapest_itinerary(payload, travel_class=None):
+    """Pick the lowest-priced itinerary across both result buckets.
+
+    For a business search, itineraries with any leg in a lower cabin are thrown
+    out. Google will happily return an economy feeder stitched to a business
+    long-haul and label the whole thing business; logging that as a business
+    fare would poison the price history.
+    """
+    wanted = {1: "Economy", 2: "Premium economy", 3: "Business", 4: "First"}.get(
+        travel_class
+    )
+
     candidates = []
     for bucket in ("best_flights", "other_flights"):
         for itinerary in payload.get(bucket, []) or []:
-            if isinstance(itinerary.get("price"), (int, float)):
-                candidates.append(itinerary)
+            if not isinstance(itinerary.get("price"), (int, float)):
+                continue
+            if wanted:
+                cabins = [leg.get("travel_class") for leg in itinerary.get("flights", [])]
+                if any(cabin != wanted for cabin in cabins):
+                    continue
+            candidates.append(itinerary)
+
     if not candidates:
         return None
     return min(candidates, key=lambda item: item["price"])
@@ -105,6 +121,7 @@ def probe(api_key, config, route, outbound_date, probe_type):
         "hl": config["hl"],
         "gl": config["gl"],
         "deep_search": "true",
+        "show_hidden": "true",
     }
 
     return_date = ""
@@ -131,9 +148,9 @@ def probe(api_key, config, route, outbound_date, probe_type):
         print(f"  {route['id']} {outbound_date}: {payload['error']}")
         return None
 
-    itinerary = cheapest_itinerary(payload)
+    itinerary = cheapest_itinerary(payload, route["travel_class"])
     if itinerary is None:
-        print(f"  {route['id']} {outbound_date}: no itineraries returned")
+        print(f"  {route['id']} {outbound_date}: no all-cabin-matching itineraries")
         return None
 
     insights = payload.get("price_insights") or {}
