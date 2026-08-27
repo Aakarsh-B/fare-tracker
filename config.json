@@ -2,9 +2,15 @@
   "currency": "INR",
   "gl": "in",
   "hl": "en",
-  "window_start": "2027-03-10",
-  "window_end": "2027-04-30",
-  "rotate_step": 7,
+  "dates": [
+    "2027-03-19",
+    "2027-03-20",
+    "2027-03-26",
+    "2027-03-27"
+  ],
+  "window_start": "2027-03-19",
+  "window_end": "2027-04-10",
+  "rotate_step": 1,
   "return_after_days": 14,
   "drop_threshold": 0.85,
   "alert_cooldown_days": 3,
