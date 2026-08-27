@@ -289,7 +289,9 @@ def main():
     config = load_json(CONFIG_PATH, None)
     state = load_json(STATE_PATH, {"cursor": {}, "best": {}, "last_alert": {}})
     history = read_history()
-    dates = window_dates(config["window_start"], config["window_end"])
+    dates = config.get("dates") or window_dates(
+        config["window_start"], config["window_end"]
+    )
 
     new_rows = []
     alerts = []
