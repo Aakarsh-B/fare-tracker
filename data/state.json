@@ -1,10 +1,32 @@
 {
-  "best": {},
-  "cursor": {
-    "blr_fco_biz": 7,
-    "blr_mxp_bid": 7,
-    "blr_mxp_biz": 7,
-    "blr_zrh_biz": 7
+  "best": {
+    "blr_fco_biz": {
+      "outbound_date": "2027-03-27",
+      "price": 90555
+    },
+    "blr_mxp_bid": {
+      "outbound_date": "2027-03-27",
+      "price": 52509
+    },
+    "blr_mxp_biz": {
+      "outbound_date": "2027-03-27",
+      "price": 103341
+    },
+    "blr_zrh_biz": {
+      "outbound_date": "2027-03-27",
+      "price": 86773
+    }
   },
-  "last_alert": {}
+  "cursor": {
+    "blr_fco_biz": 8,
+    "blr_mxp_bid": 8,
+    "blr_mxp_biz": 8,
+    "blr_zrh_biz": 8
+  },
+  "last_alert": {
+    "blr_fco_biz": "2026-08-27T13:06:00.876372+00:00",
+    "blr_mxp_bid": "2026-08-27T13:06:07.337374+00:00",
+    "blr_mxp_biz": "2026-08-27T13:05:54.827714+00:00",
+    "blr_zrh_biz": "2026-08-27T13:06:02.706901+00:00"
+  }
 }
