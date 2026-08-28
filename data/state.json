@@ -5,8 +5,8 @@
       "price": 90555
     },
     "blr_mxp_bid": {
-      "outbound_date": "2027-03-27",
-      "price": 52509
+      "outbound_date": "2027-03-20",
+      "price": 52469
     },
     "blr_mxp_biz": {
       "outbound_date": "2027-03-27",
@@ -18,10 +18,10 @@
     }
   },
   "cursor": {
-    "blr_fco_biz": 9,
-    "blr_mxp_bid": 9,
-    "blr_mxp_biz": 9,
-    "blr_zrh_biz": 9
+    "blr_fco_biz": 10,
+    "blr_mxp_bid": 10,
+    "blr_mxp_biz": 10,
+    "blr_zrh_biz": 10
   },
   "last_alert": {
     "blr_fco_biz": "2026-08-27T13:06:00.876372+00:00",
