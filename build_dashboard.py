@@ -87,11 +87,11 @@ def build_card(route, rows, currency):
     delta = latest["price"] - prices[-2] if len(prices) > 1 else 0
 
     if best_row["price"] <= target:
-        state_label, tone = "Below target", "good"
+        state_label, tone = "Good Price", "good"
     elif best_row["price"] <= target * 1.15:
-        state_label, tone = "Close", "watch"
+        state_label, tone = "Almost There", "watch"
     else:
-        state_label, tone = "Holding high", "high"
+        state_label, tone = "Too Expensive", "high"
 
     latest_price = f"{currency} {round(latest['price']):,}"
     if delta < 0:
@@ -154,7 +154,7 @@ body {
   padding: 0 0 64px;
   background: var(--bg);
   color: var(--ink);
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-family: "Google Sans Flex", "Google Sans", system-ui, -apple-system, sans-serif;
   font-size: 15px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -189,7 +189,7 @@ body {
   margin-bottom: 20px;
 }
 .masthead h1 {
-  font-family: "Kalam", "Segoe Print", cursive;
+  font-family: "Google Sans Flex", "Google Sans", system-ui, sans-serif;
   font-weight: 700;
   font-size: 34px;
   line-height: 1.1;
@@ -222,7 +222,7 @@ body {
 .route--empty { display: flex; flex-direction: column; justify-content: center; min-height: 160px; }
 .route-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
 .route h2 {
-  font-family: "Kalam", "Segoe Print", cursive;
+  font-family: "Google Sans Flex", "Google Sans", system-ui, sans-serif;
   font-weight: 700;
   font-size: 21px;
   line-height: 1.25;
@@ -319,7 +319,7 @@ def main():
 <title>Fare board &middot; Bengaluru to Milan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Kalam:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..900&display=swap" rel="stylesheet">
 <style>{STYLES}</style>
 </head>
 <body>
